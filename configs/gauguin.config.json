@@ -1,23 +1,23 @@
-{
-  "kernelSource": {
-    "name": "gauguin",
-    "repo": "https://github.com/thofd/neko_kernel_xiaomi_gauguin",
-    "branch": "main",
-    "device": "gauguin",
-    "defconfig": "vendor/gauguin_user"
-  },
-  "withKernelSU": true,
-  "toolchains": [
+[
     {
-      "repo": "https://github.com/kdrag0n/proton-clang",
-      "branch": "master",
-      "name": "proton-clang",
-      "binPath": ["bin"]
-    }
-  ],
+        "kernelSource": { 
+            "name": "gauguin", 
+            "repo": "https://github.com/thofd/neko_kernel_xiaomi_gauguin", 
+            "branch": "main", 
+            "device": "gauguin", 
+            "defconfig": "vendor/gauguin_user_defconfig" 
+          }, 
+          "toolchains": [ 
+            {  
+               "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230725-release/Clang-17.0.0-20230725.tar.gz",  
+               "name": "clang",  
+               "binaryEnv": [
+                "bin"
+            ]  
+            } 
+          ], 
           "enableCcache": true, 
-          "params":[ 
-        { 
+          "params": { 
             "ARCH": "arm64", 
             "CC": "clang/bin/clang", 
             "externalCommands": { 
@@ -47,4 +47,5 @@
             "branches": "kernel-4.19"
           },
           "enableLXC": true        
+    }
 ]
