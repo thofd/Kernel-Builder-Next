@@ -4,7 +4,7 @@
     "repo": "https://github.com/thofd/neko_kernel_xiaomi_gauguin",
     "branch": "main",
     "device": "gauguin",
-    "defconfig": "vendor/gauguin_user_defconfig"
+    "defconfig": "vendor/gauguin_user"
   },
   "withKernelSU": true,
   "toolchains": [
