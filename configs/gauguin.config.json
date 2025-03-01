@@ -16,7 +16,8 @@
     }
   ],
           "enableCcache": true, 
-          "params": { 
+          "params":[ 
+    { 
             "ARCH": "arm64", 
             "CC": "clang/bin/clang", 
             "externalCommands": { 
